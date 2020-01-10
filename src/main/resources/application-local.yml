@@ -1,0 +1,25 @@
+spring:
+  mvc.async.request-timeout: 10000
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/hp
+
+eureka:
+  client:
+    enabled: false
+    registerWithEureka: false
+    fetchRegistry: false
+
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+hystrix.command:
+  default.execution.isolation.thread.timeoutInMilliseconds: 5000
+
+thread:
+  config:
+    corePoolSize: 50
+    maxCorePoolSize: 80
