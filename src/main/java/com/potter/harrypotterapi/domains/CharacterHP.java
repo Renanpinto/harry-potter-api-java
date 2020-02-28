@@ -1,18 +1,14 @@
 package com.potter.harrypotterapi.domains;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.*;
+import lombok.Builder;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-@Setter
-@Getter
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 @Document(collection = "character")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CharacterHP {
